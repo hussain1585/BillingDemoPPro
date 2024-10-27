@@ -1,0 +1,30 @@
+version: '3.1'
+
+services:
+  app:
+    image: 'cabs-app:latest'
+    build:
+      context: .
+    container_name: billing_demo_app
+    ports:
+      - "8080:8080"
+#    depends_on:
+#      - db
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
+#      - SPRING_DATASOURCE_USERNAME=postgres
+#      - SPRING_DATASOURCE_PASSWORD=cabs
+#      - SPRING_JPA_HIBERNATE_AUTO_DDL=update
+
+
+#  db:
+#    image: postgres
+#    container_name: db
+#    ports:
+#      - "5432:5432"
+#    #      - "5555:5555"
+#    restart: always
+#    environment:
+#      POSTGRES_USER: postgres
+#      POSTGRES_PASSWORD: cabs
+##      POSTGRES_DB: cabs
